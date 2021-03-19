@@ -286,10 +286,10 @@ const VideoPlayer = (props: Props) => {
           // If the video is buffering but there is no Internet, you go to the Error state
           if (!isConnected && status.isBuffering) {
             updatePlaybackState(PlaybackStates.Error)
-            setError(
+            /*setError(
               'You are probably offline.' +
                 'Please make sure you are connected to the Internet to watch this video'
-            )
+            )*/
           } else {
             updatePlaybackState(isPlayingOrBufferingOrPaused(status))
           }
